@@ -1,0 +1,41 @@
+
+<html>
+    <head>
+        <title>My Family Book</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <center>
+            <div>
+                <h1>My Family Book</h1>
+                <img id="photo" src="https://images-na.ssl-images-amazon.com/images/I/91zbi9M+mKL.jpg">
+                <br>
+                <br>
+                <label id="Name_Display"></label>
+                 <br>
+                <br>
+                <button id="next_button" onclick="next_member()">Next</button>
+            </div> 
+        </center>
+    </body>
+
+    <script>
+        var names=["MC Swaroop","Neha Dugar","Shresht Dugar","Sumit Mavila Dugar", "Virat Mavila Dugar"];
+        
+        var images=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlBAl1N4S68EyTy-IgaH4018eszculLrOWMg&usqp=CAU","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRurLmrgCDyZZZ5mfdTcv2KvAKcwcz3jcURjA&usqp=CAU","https://c8.alamy.com/comp/PGP97X/portrait-of-young-indian-teenage-boy-relaxing-at-the-park-PGP97X.jpg" ,"https://captionsgram.com/wp-content/uploads/2021/02/Cute-Instagram-Captions-For-Child-Photos.jpg" , "https://captionsgram.com/wp-content/uploads/2021/02/Cute-Instagram-Captions-For-Child-Photos.jpg" ];
+        
+        var i=0;
+        function next_member(){
+                document.getElementById("photo").src=images[i];
+                document.getElementById("Name_Display").innerHTML=names[i];
+                i++;
+
+                if(i == 5)
+                {
+                    i=0;
+                }
+        }
+
+    </script>
+</html>
